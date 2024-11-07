@@ -26,16 +26,6 @@ const Navbar = () => {
           <Link to="contact" spy={true} smooth={true} duration={500}>
             Contact Us
           </Link>
-          <a
-            className="log"
-            target="_blank"
-            href="https://form.jotform.com/242584794523062"
-            spy={true}
-            smooth={true}
-            duration={500}
-          >
-            Abstract
-          </a>
         </div>
       </div>
       <div className="hamburger" onClick={() => setShow(!show)}>
