@@ -26,6 +26,7 @@ const Navbar = () => {
           <Link to="contact" spy={true} smooth={true} duration={500}>
             Contact Us
           </Link>
+          <button onClick={() => window.open("https://form.jotform.com/242584794523062", "_blank")} className="navbar-button">Submit Abstract</button>
         </div>
       </div>
       <div className="hamburger" onClick={() => setShow(!show)}>
