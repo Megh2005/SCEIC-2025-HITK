@@ -14,18 +14,6 @@ const Announcements = () => {
           </thead>
           <tbody>
             <tr>
-              <td>Abstract Submission Deadline</td>
-              <td>
-                30<sup>th</sup> November, 2024
-              </td>
-            </tr>
-            <tr>
-              <td>Notification of Acceptance of Abstract</td>
-              <td>
-                10<sup>th</sup> December, 2024
-              </td>
-            </tr>
-            <tr>
               <td>Full Paper Submission Deadline</td>
               <td>
                 20<sup>th</sup> December, 2024
