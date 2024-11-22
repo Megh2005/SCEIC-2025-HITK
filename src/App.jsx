@@ -1,15 +1,8 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Toaster } from "react-hot-toast";
 import { motion, useInView } from "framer-motion";
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import About from "./components/About";
-import Themes from "./components/Themes";
-import Contacts from "./components/Contacts";
-import Footer from "./components/Footer";
-import Announcements from "./components/Announcements";
+import HeroSection from './components/HeroSection';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 90 },
@@ -37,26 +30,45 @@ const AnimatedSection = ({ children }) => {
 const App = () => {
   return (
     <Router>
-      <Navbar />
-      <AnimatedSection>
-        <HeroSection />
-      </AnimatedSection>
-      <AnimatedSection>
-        <About />
-      </AnimatedSection>
-      <AnimatedSection>
-        <Themes />
-      </AnimatedSection>
-      <AnimatedSection>
-        <Announcements />
-      </AnimatedSection>
-      <AnimatedSection>
-        <Contacts />
-      </AnimatedSection>
-      <AnimatedSection>
-        <Footer />
-      </AnimatedSection>
-      <Toaster />
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          minHeight: "100vh",
+          backgroundColor: "#1a202c", // Dark background
+          color: "#ffffff", // White text
+        }}
+      >
+        <AnimatedSection>
+        </AnimatedSection>
+        <motion.button
+          onClick={() =>
+            window.open("https://sceic-new-address.vercel.app")
+          }
+          style={{
+            backgroundColor: "#fbbf24", // Yellow background
+            color: "#000000", // Black text
+            fontSize: "1rem",
+            fontWeight: "bold",
+            padding: "0.75rem 1.5rem",
+            border: "none",
+            borderRadius: "0.5rem",
+            cursor: "pointer",
+            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+            transition: "transform 0.2s, background-color 0.3s",
+          }}
+          whileHover={{
+            scale: 1.1,
+            backgroundColor: "#f59e0b", // Darker yellow on hover
+          }}
+          whileTap={{ scale: 0.95 }}
+        >
+          GO TO OFFICIAL WEBSITE
+        </motion.button>
+      </div>
     </Router>
   );
 };
