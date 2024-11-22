@@ -44,10 +44,8 @@ const App = () => {
       >
         <AnimatedSection>
         </AnimatedSection>
-        <motion.button
-          onClick={() =>
-            window.open("https://sceic-new-address.vercel.app")
-          }
+        <motion.a
+          href="https://sceic-new-address.vercel.app"
           style={{
             backgroundColor: "#fbbf24", // Yellow background
             color: "#000000", // Black text
@@ -67,7 +65,7 @@ const App = () => {
           whileTap={{ scale: 0.95 }}
         >
           GO TO OFFICIAL WEBSITE
-        </motion.button>
+        </motion.a>
       </div>
     </Router>
   );
